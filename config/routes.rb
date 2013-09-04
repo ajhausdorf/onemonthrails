@@ -1,7 +1,13 @@
 Omrails::Application.routes.draw do
+  devise_for :users
+
   get 'about' => 'pages#about'
   
   get 'ajhausdorf' => 'pages#ajhausdorf'
+
+  get 'profile' => 'pages#profile'
+
+  get 'login' => 'pages#login'
 
   root :to => 'pages#home'
 
